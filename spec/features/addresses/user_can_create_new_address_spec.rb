@@ -4,8 +4,8 @@ describe 'when user visits student page' do
   scenario 'a user can create new address by filling out a form' do
     student = Student.create!(name: 'Alan Turing')
 
-    visit student_path(student)
-    
+    visit new_student_address_path(student)
+
     description = 'home'
     street = '805 Turing Blvd'
     city = 'London'

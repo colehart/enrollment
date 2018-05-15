@@ -5,4 +5,5 @@ class Address < ApplicationRecord
                         :city,
                         :state,
                         :zip_code
+  belongs_to :student
 end
