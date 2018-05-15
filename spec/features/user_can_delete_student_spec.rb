@@ -8,7 +8,7 @@ describe 'user deletes a student' do
     visit students_path
 
     expect(page).to have_content(expendable_name)
-    
+
     within("#student-#{student.id}") do
       click_on 'Delete'
     end
