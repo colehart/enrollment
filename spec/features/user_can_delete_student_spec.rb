@@ -9,7 +9,9 @@ describe 'user deletes a student' do
 
     expect(page).to have_content(expendable_name)
 
-    within(".student_#{student.id}") do
+    save_and_open_page
+
+    within("#student-#{student.id}") do
       click_on 'Delete'
     end
 

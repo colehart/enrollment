@@ -1,5 +1,8 @@
 !!!
 %h1 All Students
 %ul.students
-  - @students.each do |student|
-    %li.student-name= link_to student.name, student_path(student)
+  - @students.each do |stu|
+    %li{ :id => "student-#{stu.id}" }
+      = link_to stu.name, student_path(stu)
+      = link_to 'Edit', edit_student_path(stu)
+      = link_to 'Delete', student_path(stu), method: 'delete'
