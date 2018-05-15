@@ -1,7 +1,3 @@
 !!!
 %strong Create new student here
-= form_for @student do |f|
-  = f.label :name
-  = f.text_field :name
-
-  = f.submit 'Submit'
+= render partial: "form"
