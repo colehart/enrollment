@@ -10,7 +10,7 @@ describe 'user sees list of students' do
       new_student_button = 'Create a New Student'
 
       visit students_path
-
+      save_and_open_page
       expect(page).to have_link(student1.name)
       expect(page).to have_link(student2.name)
       expect(page).to have_link(student3.name)

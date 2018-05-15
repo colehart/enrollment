@@ -8,4 +8,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
+    %a{ :href => (link_to students_path) } All Students
+    %a{ :href => (link_to new_student_path) } Create Student
+
     = yield
