@@ -8,7 +8,6 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/coverage/*
 /log/*
 /tmp/*
 !/log/.keep
@@ -16,6 +15,10 @@
 
 # Ignore uploaded files in development
 /storage/*
+/coverage/*
+
+Gemfile
+Gemfile.lock
 
 /node_modules
 /yarn-error.log
