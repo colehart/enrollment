@@ -1,7 +1,7 @@
 # spec/features/ student :show test
 require 'rails_helper'
 
-describe 'user sees one article' do
+describe 'user sees one student' do
   it 'shows one student' do
     student1 = Student.create!(name: 'Cole Hart')
 
