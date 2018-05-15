@@ -1,0 +1,9 @@
+= form_for @student do |f|
+  - if @student.name
+    = f.label :name
+    = f.text_field :name, class: 'placeholder', placeholder: "#{@student.name}"
+    = f.submit 'Update'
+  - else
+    = f.label :name
+    = f.text_field :name
+    = f.submit 'Submit'
