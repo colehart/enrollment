@@ -42,7 +42,7 @@ group :development, :test do
   gem 'launchy'
   gem 'pry'
   gem 'rspec-rails'
-  gem 'simplecov'
+  gem 'simplecov', require: false
   gem 'shoulda-matchers'
 end
 
