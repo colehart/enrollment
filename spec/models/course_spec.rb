@@ -6,6 +6,7 @@ describe Course, type: :model do
     it { should validate_presence_of(:title) }
   end
   describe 'relationships' do
-    it { should have_and_belong_to_many(:students) }
+    it { should have_many(:students) }
+    it { should have_many(:student_courses) }
   end
 end
