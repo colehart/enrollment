@@ -1,2 +1,24 @@
 !!!
 %h1= @student.name
+%hr
+%table
+  %caption Addresses
+  %thead
+    %tr
+      %th Description
+      %th Street
+      %th City
+      %th State
+      %th Zip Code
+- if @addresses.empty?
+  %p Student has no registered addresses
+- else
+  %tbody
+    - @addresses.each do |address|
+      %tr
+        %td= address.description
+        %td= address.street
+        %td= address.city
+        %td= address.state
+        %td= address.zip_code
+      %br

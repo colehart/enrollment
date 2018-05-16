@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'when user visits student page' do
+describe 'when user visits student address page' do
   scenario 'a user can create new address by filling out a form' do
     student = Student.create!(name: 'Alan Turing')
 

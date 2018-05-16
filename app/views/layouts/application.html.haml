@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
     %title Enrollment
     = csrf_meta_tags
     = csp_meta_tag
@@ -9,7 +9,7 @@
     = javascript_include_tag 'application'
   %body
     %section.navigation
-      %a{ :href => '/students' } All Students
-      %a{ :href => '/students/new' } Create New Student
+      %a{ href: '/students' } All Students
+      %a{ href: '/students/new' } Create New Student
 
     = yield
