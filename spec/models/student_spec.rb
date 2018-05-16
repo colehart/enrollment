@@ -7,5 +7,6 @@ describe Student, type: :model do
   end
   describe 'relationships' do
     it { should have_many(:addresses) }
+    it { should have_and_belong_to_many(:courses) }
   end
 end
