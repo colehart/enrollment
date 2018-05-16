@@ -9,7 +9,7 @@ describe 'user sees one student' do
 
     visit course_path(course1)
 
-    expect(page).to have_content(student1.name)
+    expect(page).to have_content(course1.title)
     expect(page).to have_link(student_index_button)
     expect(page).to have_link(new_student_button)
   end
