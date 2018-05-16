@@ -19,7 +19,7 @@ describe 'when user visits student address page' do
     fill_in 'address[zip_code]', with: zip_code
 
     click_on 'Create Address'
-
+    
     expect(current_path).to eq(student_path(student))
 
     expect(page).to have_content(description)

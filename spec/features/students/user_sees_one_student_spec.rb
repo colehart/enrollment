@@ -25,20 +25,30 @@ describe 'user sees one student' do
 
   it 'shows all addresses' do
     student1 = Student.create!(name: 'Cole Hart')
-    address1 = student1.addresses.create(description: 'home',
+    address1 = student1.addresses.create!(description: 'home',
                                          street: '805 Turing Blvd',
                                          city: 'London',
                                          state: 'England',
                                          zip_code: '80026')
 
-    address2 = student1.addresses.create(description: 'work',
+    address2 = student1.addresses.create!(description: 'work',
                                          street: '101 Main St',
                                          city: 'Denver',
                                          state: 'Colorado',
                                          zip_code: '80002')
     visit student_path(student1)
-    save_and_open_page
     expect(page).to have_content(address1.description)
     expect(page).to have_content(address2.description)
+  end
+
+  it 'shows all courses' do
+    student1 = Student.create!(name: 'Cole Hart')
+    course1 = student1.courses.create!(name: 'English 101')
+    course2 = student1.courses.create!(name: 'Algebra 201')
+
+    visit student_path(student1)
+
+    expect(page).to have_content(course1.name)
+    expect(page).to have_content(course2.name)
   end
 end
