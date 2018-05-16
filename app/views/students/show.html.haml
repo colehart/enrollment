@@ -4,9 +4,10 @@
 - if @courses.empty?
   %p Student has no registered courses
 - else
+  %h3 Course List
   %ul
     - @courses.each do |course|
-      %li course.name
+      %li= link_to "#{course.title}", course_path
 %hr
 %table
   %caption Addresses

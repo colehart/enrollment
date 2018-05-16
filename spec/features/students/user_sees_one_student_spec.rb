@@ -43,12 +43,12 @@ describe 'user sees one student' do
 
   it 'shows all courses' do
     student1 = Student.create!(name: 'Cole Hart')
-    course1 = student1.courses.create!(name: 'English 101')
-    course2 = student1.courses.create!(name: 'Algebra 201')
+    course1 = student1.courses.create!(title: 'English 101')
+    course2 = student1.courses.create!(title: 'Algebra 201')
 
     visit student_path(student1)
 
-    expect(page).to have_content(course1.name)
-    expect(page).to have_content(course2.name)
+    expect(page).to have_content(course1.title)
+    expect(page).to have_content(course2.title)
   end
 end
