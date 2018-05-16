@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_05_16_202348) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
   end
 
   create_table "courses_students", id: false, force: :cascade do |t|

@@ -1,5 +1,12 @@
 !!!
 %h1= @student.name
+%ul
+- if @courses.empty?
+  %p Student has no registered courses
+- else
+  %ul
+    - @courses.each do |course|
+      %li course.name
 %hr
 %table
   %caption Addresses
